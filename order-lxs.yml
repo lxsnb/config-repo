@@ -7,4 +7,4 @@ spring:
 env: lxstest
 obj:
   name: lxs
-  age: 10
+  age: 15
