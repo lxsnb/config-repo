@@ -1,0 +1,15 @@
+##配置一个路由，如果要动态配置路由（即修改不用重启，或者配置对个路由），则要用bus和git上的webhooks，
+##并且更新自己修改的配置（也就是写一个bean读取自己的配置文件的ZuulProperties）##
+zuul:
+  routes:
+    #/myproduct/product/list-->/product/product/list#
+    aaaa:
+      path: /myproduct/**
+      serviceId: product
+      #敏感头，header里的cookie默认是不传的，这里设置了空，就可以手动request.getCookie获取cookie#
+      sensitiveHeaders:
+    #简写#
+    product: /myproduct/**
+  #禁止路由这个地址#
+  ignored-patterns:
+  - /**/product/listForOthers
