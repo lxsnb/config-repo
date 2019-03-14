@@ -1,0 +1,4 @@
+env: lxstest
+obj:
+  name: lxs
+  age: 15
