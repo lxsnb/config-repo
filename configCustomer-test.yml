@@ -1,4 +1,4 @@
-env: lxstest11
+env: dev
 obj:
   name: lxs
   age: 18
